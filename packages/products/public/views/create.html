@@ -1,0 +1,102 @@
+<section data-ng-controller="ProductsController">
+    <form name="productForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(productForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.simple.$invalid }">
+            <label mean-token="'create-simple'" class="col-md-3 control-label">Simple</label>
+            <div class="col-md-9">
+                {{account.name}}-<input name="simple" type="text" class="form-control" data-ng-model="simple" id="simple" placeholder="Sku-Simple" required>
+                <div ng-show="submitted && productForm.simple.$invalid" class="help-block">
+                    <p ng-show="productForm.simple.$error.required">Simple is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.name.$invalid }">
+            <label mean-token="'create-name'" for="name" class="col-md-3 control-label">Name</label>
+            <div class="col-md-9">
+                <input name="name" type="text" class="form-control" data-ng-model="name" id="name" placeholder="Name" required>
+                <div ng-show="submitted && productForm.name.$invalid" class="help-block">
+                    <p ng-show="productForm.name.$error.required">Name is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.category.$invalid }">
+            <label mean-token="'create-category'" for="category" class="col-md-3 control-label">Category</label>
+            <div class="col-md-9">
+                <input name="category" type="text" class="form-control" data-ng-model="category" id="category" placeholder="Category" required>
+                <div ng-show="submitted && productForm.category.$invalid" class="help-block">
+                    <p ng-show="productForm.category.$error.required">Category is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.currency.$invalid }">
+            <label mean-token="'create-currency'" for="currency" class="col-md-3 control-label">Currency</label>
+            <div class="col-md-9">
+                <input name="currency" type="text" class="form-control" data-ng-model="currency" id="currency" placeholder="Currency" required>
+                <div ng-show="submitted && productForm.currency.$invalid" class="help-block">
+                    <p ng-show="productForm.currency.$error.required">Currency is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.original_price.$invalid }">
+            <label mean-token="'create-original_price'" for="original_price" class="col-md-3 control-label">Original Price</label>
+            <div class="col-md-9">
+                <input name="original_price" type="text" class="form-control" data-ng-model="original_price" id="original_price" placeholder="Original Price" required>
+                <div ng-show="submitted && productForm.original_price.$invalid" class="help-block">
+                    <p ng-show="productForm.original_price.$error.required">Original Price is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-special_price'" for="special_price" class="col-md-3 control-label">Special Price</label>
+            <div class="col-md-9">
+                <input name="special_price" type="text" class="form-control" data-ng-model="special_price" id="special_price" placeholder="Special Price">
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.price.$invalid }">
+            <label mean-token="'create-price'" for="price" class="col-md-3 control-label">Price</label>
+            <div class="col-md-9">
+                <input name="price" type="text" class="form-control" data-ng-model="price" id="price" placeholder="Price" required>
+                <div ng-show="submitted && productForm.price.$invalid" class="help-block">
+                    <p ng-show="productForm.price.$error.required">Price is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label mean-token="'create-description'" for="description" class="col-md-3 control-label">Description</label>
+            <div class="col-md-9">
+                <input name="description" type="text" class="form-control" data-ng-model="description" id="description" placeholder="Description" >
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.is_show_price.$invalid }">
+            <label mean-token="'create-is_show_price'" for="is_show_price" class="col-md-3 control-label">Is Show Price</label>
+            <div class="col-md-9">
+                <input name="is_show_price" type="text" class="form-control" data-ng-model="is_show_price" id="is_show_price" placeholder="Is Show Price" required>
+                <div ng-show="submitted && productForm.is_show_price.$invalid" class="help-block">
+                    <p ng-show="productForm.is_show_price.$error.required">Is Show Price is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.is_discoverable.$invalid }">
+            <label mean-token="'create-is_discoverable'" for="is_discoverable" class="col-md-3 control-label">Is Discoverable</label>
+            <div class="col-md-9">
+                <input name="is_discoverable" type="text" class="form-control" data-ng-model="is_discoverable" id="is_discoverable" placeholder="Is Discoverable" required>
+                <div ng-show="submitted && productForm.is_discoverable.$invalid" class="help-block">
+                    <p ng-show="productForm.is_discoverable.$error.required">Is Discoverable is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && productForm.custom_fields.$invalid }">
+            <label mean-token="'create-custom_fields'" for="custom_fields" class="col-md-3 control-label">Custom Fields</label>
+            <div class="col-md-9">
+                <textarea name="custom_fields" data-ng-model="custom_fields" id="custom_fields" cols="30" rows="10" placeholder="Custom Fields" class="form-control" required></textarea>
+                <div ng-show="submitted && productForm.custom_fields.$invalid" class="help-block">
+                    <p ng-show="productForm.custom_fields.$error.required">Custom Fields is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+        </div>
+    </form>
+</section>

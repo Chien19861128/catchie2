@@ -1,9 +1,9 @@
 {
-  "name": "accounts",
+  "name": "users",
   "version": "0.0.1",
-  "description": "Accounts package",
+  "description": "Users package",
   "author": {
-    "name": "Chien"
+    "name": "Linnovate"
   },
   "mean": "0.4.x",
   "engines": {

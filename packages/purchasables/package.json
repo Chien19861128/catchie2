@@ -1,7 +1,7 @@
 {
-  "name": "accounts",
+  "name": "purchasables",
   "version": "0.0.1",
-  "description": "Accounts package",
+  "description": "Purchasables package",
   "author": {
     "name": "Chien"
   },

@@ -1,0 +1,21 @@
+<section data-ng-controller="AccountsController" data-ng-init="find()">
+  <ul class="accounts unstyled">
+    <li data-ng-repeat="account in accounts">
+      <span>{{account.created | date:'medium'}}</span> /
+      <span>{{account.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/accounts/{{account._id}}">{{account.title}}</a>
+        <span data-ng-if="hasAuthorization(account)">
+          <a class="btn" href="/#!/accounts/{{account._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(account);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{account.content}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!accounts || accounts.length">No accounts yet. <br> Why don't you <a href="/#!/accounts/create">Create One</a>?</h1>
+</section>

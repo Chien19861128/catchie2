@@ -1,7 +1,7 @@
 {
-  "name": "accounts",
+  "name": "product_defaults",
   "version": "0.0.1",
-  "description": "Accounts package",
+  "description": "Product Defaults package",
   "author": {
     "name": "Chien"
   },

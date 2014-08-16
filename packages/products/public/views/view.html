@@ -1,0 +1,12 @@
+<section data-ng-controller="ProductsController" data-ng-init="findOne()">
+    <span>{{product.created | date:'medium'}}</span> /
+    <span>{{product.name}}</span>
+    <h2>{{product.price}}</h2>
+        <a class="btn" href="/#!/products/{{product.simple}}/edit">
+        	<i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    <div>{{product.description}}</div>
+</section>
